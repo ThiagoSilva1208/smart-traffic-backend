@@ -1,0 +1,1 @@
+{"version":3,"file":"jwt.d.ts","sourceRoot":"","sources":["../../../src/auth/plugins/jwt.ts"],"names":[],"mappings":";AAIA,wBAQG;AAEH,OAAO,QAAQ,SAAS,CAAC;IACvB,UAAU,eAAe;QACvB,aAAa,CAAC,IAAI,EAAE,GAAG,GAAG,MAAM,CAAC;KAClC;CACF"}
