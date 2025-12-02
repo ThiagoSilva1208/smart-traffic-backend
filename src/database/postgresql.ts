@@ -1,8 +1,9 @@
 import pkg from "pg";
 const { Pool } = pkg;
+import "dotenv"
 
 export const pool = new Pool({
-  connectionString: "postgresql://postgres:sMARTtRAFFICdATABASE@2023@db.nzpfzwjizvzfizpepvwf.supabase.co:5432/postgres",
+  connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }

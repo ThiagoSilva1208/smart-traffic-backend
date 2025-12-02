@@ -18,7 +18,7 @@ app.register(jwt)
 app.register(fastifyCookie)
 
 app.register(cors, {
-    origin: "http://localhost:3000",
+    origin: "https://smart-traffic-nine.vercel.app",
     methods: ["GET", "POST", "PUT", "PUTCH", "DELETE"],
     credentials: true,
 })
