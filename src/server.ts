@@ -9,6 +9,7 @@ import { HttpStatusCode } from "./protocols.js"
 import jwt from './auth/plugins/jwt.js'
 import fastifyCookie from '@fastify/cookie'
 import cors from "@fastify/cors"
+import "dotenv"
 
 
 export const app = Fastify({ logger: true })
@@ -47,13 +48,19 @@ app.post("/login", async (request: FastifyRequest<{ Body: LoginUserBody }>, repl
 })
 
 const start = async () => {
-    try {
-        await app.listen({ port: 3333 })
-    }
+  try {
+    const port = Number(process.env.PORT) || 3333;
 
-    catch (err) {
-        throw new Error();
-    }
-}
+    await app.listen({
+      port,
+      host: "0.0.0.0",
+    });
+
+    console.log("Server running on port", port);
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+};
 
 start()
